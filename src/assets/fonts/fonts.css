@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("./Gilroy-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+/* @font-face {
+  font-family: "Gilroy";
+  src: url("./Gilroy-ExtraBold.otf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+} */
+@font-face {
+  font-family: "Gilroy";
+  src: url("./Gilroy-Heavy.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./Gilroy-Light.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./Gilroy-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
