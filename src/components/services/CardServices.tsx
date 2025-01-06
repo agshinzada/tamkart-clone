@@ -4,9 +4,9 @@ import CardServiceItem from "./CardServiceItem";
 
 const settings = {
   dots: false,
-  infinite: true,
+  infinite: false,
   speed: 500,
-  slidesToShow: 4,
+  slidesToShow: 5,
   slidesToScroll: 1,
   arrows: false,
   centerMode: true,

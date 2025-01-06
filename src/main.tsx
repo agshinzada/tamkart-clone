@@ -15,6 +15,7 @@ import Homepage from "./pages/Homepage.tsx";
 import CardsPage from "./pages/CardsPage.tsx";
 import CampaignPage from "./pages/CampaignPage.tsx";
 import FaqsPage from "./pages/FaqsPage.tsx";
+import PartnersPage from "./pages/PartnersPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/faq",
         element: <FaqsPage />,
+      },
+      {
+        path: "/partners",
+        element: <PartnersPage />,
       },
     ],
   },

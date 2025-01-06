@@ -1,79 +1,23 @@
-import partnerLogo from "../../assets/partner1.jpeg";
-import partnerLogo2 from "../../assets/partner2.png";
-import partnerLogo3 from "../../assets/partner3.png";
+import { useEffect, useState } from "react";
 import Button from "../Button";
 import PartnerDetails from "../partner/PartnerDetails";
 import SectionButton from "./SectionButton";
+import { PartnerDetail } from "../../types/partner";
 
-const partners = [
-  {
-    logo: partnerLogo,
-    name: "Online Tikinti Bazarı",
-    type: "Pərakəndə satış",
-    taksit: "2 - 24 ay",
-  },
-  {
-    logo: partnerLogo,
-    name: "Optimal Təkər Mərkəzi",
-    type: "Pərakəndə satış",
-    taksit: "2 - 24 ay",
-  },
-  {
-    logo: partnerLogo3,
-    name: "Geyim mağazası",
-    type: "Geyim mağazası",
-    taksit: "2 - 24 ay",
-  },
-  {
-    logo: partnerLogo2,
-    name: "Zuhur Telekom",
-    type: "Mobil telefon və aksessuar",
-    taksit: "2 - 6 ay",
-  },
-  {
-    logo: partnerLogo2,
-    name: "Seyf mağazası",
-    type: "Pərakəndə satış",
-    taksit: "3 ay",
-  },
-  {
-    logo: partnerLogo3,
-    name: "Optimal Təkər Mərkəzi",
-    type: "Pərakəndə satış",
-    taksit: "2 - 24 ay",
-  },
-  {
-    logo: partnerLogo,
-    name: "Geyim mağazası",
-    type: "Geyim mağazası",
-    taksit: "2 - 24 ay",
-  },
-  {
-    logo: partnerLogo2,
-    name: "Zuhur Telekom",
-    type: "Mobil telefon və aksessuar",
-    taksit: "2 - 6 ay",
-  },
-  {
-    logo: partnerLogo,
-    name: "Seyf mağazası",
-    type: "Pərakəndə satış",
-    taksit: "3 ay",
-  },
-  {
-    logo: partnerLogo3,
-    name: "Zuhur Telekom",
-    type: "Mobil telefon və aksessuar",
-    taksit: "2 - 6 ay",
-  },
-  {
-    logo: partnerLogo,
-    name: "Seyf mağazası",
-    type: "Pərakəndə satış",
-    taksit: "3 ay",
-  },
-];
 const PartnersSection = () => {
+  const [data, setData] = useState<PartnerDetail[]>([]);
+
+  async function getPartners() {
+    const response = await fetch(
+      "https://json-server-seven-murex.vercel.app/tamkart/"
+    );
+    const data = await response.json();
+    setData(data.partners);
+  }
+
+  useEffect(() => {
+    getPartners();
+  }, []);
   return (
     <section>
       <div className="max-w-[1040px] mx-auto flex flex-col items-start mt-44">
@@ -92,7 +36,7 @@ const PartnersSection = () => {
         </div>
       </div>
       <div className="px-10">
-        <PartnerDetails data={partners} />
+        <PartnerDetails data={data} />
       </div>
     </section>
   );
