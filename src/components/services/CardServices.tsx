@@ -6,10 +6,10 @@ const settings = {
   dots: false,
   infinite: false,
   speed: 500,
-  slidesToShow: 5,
+  slidesToShow: 4,
   slidesToScroll: 1,
   arrows: false,
-  centerMode: true,
+  centerMode: false,
 };
 const CardServices = ({ data }: { data: ServiceItemType[] }) => {
   return (

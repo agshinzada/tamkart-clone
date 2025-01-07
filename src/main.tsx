@@ -17,6 +17,8 @@ import CampaignPage from "./pages/CampaignPage.tsx";
 import FaqsPage from "./pages/FaqsPage.tsx";
 import PartnersPage from "./pages/PartnersPage.tsx";
 import CardDetailPage from "./pages/CardDetailPage.tsx";
+import PartnerDetailPage from "./pages/PartnerDetailPage.tsx";
+import CampaignDetailPage from "./pages/CampaignDetailPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +52,14 @@ const router = createBrowserRouter([
       {
         path: "/cards/:id",
         element: <CardDetailPage />,
+      },
+      {
+        path: "/partners/:id",
+        element: <PartnerDetailPage />,
+      },
+      {
+        path: "/campaigns/:id",
+        element: <CampaignDetailPage />,
       },
     ],
   },

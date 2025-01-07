@@ -1,8 +1,6 @@
-import { Link, useNavigate } from "react-router-dom";
-import back from "../assets/back.svg";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import circle from "../assets/circle.svg";
 import Button from "../components/Button";
-import card from "../assets/card1.png";
 import serviceIcon1 from "../assets/serviceIcon1.svg";
 import serviceIcon2 from "../assets/serviceIcon2.svg";
 import serviceIcon3 from "../assets/serviceIcon3.svg";
@@ -14,6 +12,9 @@ import icon2 from "../assets/services/2.svg";
 import icon3 from "../assets/services/3.svg";
 import icon4 from "../assets/services/4.svg";
 import icon5 from "../assets/services/5.svg";
+import { useEffect, useState } from "react";
+import { CardItemTypes } from "../types/card";
+import BackBtn from "../components/BackBtn";
 
 const services = [
   {
@@ -49,27 +50,48 @@ const services = [
 ];
 
 const CardDetailPage = () => {
-  const navigate = useNavigate();
+  const params = useParams();
+  const [searchParam] = useSearchParams();
+  const [cardData, setCardData] = useState<CardItemTypes>();
+  const [relatedCards, setRelatedCards] = useState<CardItemTypes[]>([]);
+
+  async function getCard() {
+    const response = await fetch(
+      "https://json-server-seven-murex.vercel.app/tamkart/"
+    );
+    const data = await response.json();
+    const findCard = data.cards.find(
+      (item: CardItemTypes) => item.id === parseInt(params.id!)
+    );
+    const related = data.cards.filter(
+      (item: CardItemTypes) =>
+        item.type === searchParam.get("type") &&
+        item.id !== parseInt(params.id!)
+    );
+    setRelatedCards(related);
+    setCardData(findCard);
+  }
+
+  useEffect(() => {
+    getCard();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [params]);
+
   return (
     <section className="pt-36">
       <div className="max-w-[1040px] mx-auto ">
-        <button
-          type="button"
-          className="flex gap-2 items-center bg-cdark border border-csecondary rounded-3xl px-6 py-2.5 text-[16px] h-fit text-white font-semibold hover:opacity-70 transition-all duration-300"
-          onClick={() => navigate(-1)}
-        >
-          <img src={back} alt="back" />
-          Geri
-        </button>
+        <BackBtn />
         <div className="flex justify-between mt-24 items-center">
           <div className="w-[62%] flex flex-col gap-7">
             <div className="flex flex-col gap-2">
               <h4 className="text-[48px] text-white font-bold">
-                Tam DigiCard Debet{" "}
+                {cardData?.name}
               </h4>
               <p className="text-lg text-white opacity-60">
-                İllik istifadə limiti olmayan tam funksional rəqəmsal debet
-                kartdır.
+                {cardData?.summary}
               </p>
             </div>
             <div className="flex gap-10 items-center text-white">
@@ -99,7 +121,7 @@ const CardDetailPage = () => {
           <div className="w-[380px] relative">
             <img src={circle} alt="circle" />
             <img
-              src={card}
+              src={cardData?.image}
               alt="card"
               className="absolute -top-12 right-0 w-[309px]"
             />
@@ -133,7 +155,10 @@ const CardDetailPage = () => {
         </div>
         <div className="py-12 px-16 rounded-3xl bg-csecondary text-white flex flex-col gap-10 mt-24">
           <p className="text-[40px] font-bold">
-            <span className="text-cprimary">Debet kart</span> üzrə imkanlar
+            <span className="text-cprimary">
+              {cardData?.type === "debit" ? "Debet" : "Kredit"} kart
+            </span>{" "}
+            üzrə imkanlar
           </p>
           <ul className="font-semibold flex flex-col gap-4">
             <li className="before:content-[''] before:block before:min-w-4 before:h-0.5 before:bg-cprimary before:mr-4 flex items-center">
@@ -186,7 +211,6 @@ const CardDetailPage = () => {
           <button
             type="button"
             className="flex gap-2 items-center mt-5 bg-cthird rounded-lg w-fit px-6 py-3 group text-lg h-fit text-white font-semibold hover:bg-cprimary hover:text-black transition-all duration-300"
-            onClick={() => navigate(-1)}
           >
             <svg
               width="20"
@@ -256,44 +280,25 @@ const CardDetailPage = () => {
       </div>
       <CardServices data={services} />
       <div className="max-w-[1040px] mx-auto mt-24">
-        <SectionTitle title="Digər debet kartlar" />
+        <SectionTitle
+          title={`Digər ${
+            cardData?.type === "debit" ? "debet" : "kredit"
+          }  kartlar`}
+        />
         <div className="flex gap-4 items-center mt-10">
-          <Link to={"/"}>
-            <div>
-              <img src={card} alt="card" className="h-[186px]" />
-              <h5 className="text-2xl font-semibold text-white mt-5">
-                Tam DigiCard Debet
-              </h5>
-              <p className="text-lg mt-2 opacity-50 text-white">
-                İllik istifadə limiti olmayan tam funksional rəqəmsal debet
-                kartdır.
-              </p>
-            </div>
-          </Link>
-          <Link to={"/"}>
-            <div>
-              <img src={card} alt="card" className="h-[186px]" />
-              <h5 className="text-2xl font-semibold text-white mt-5">
-                Tam DigiCard Debet
-              </h5>
-              <p className="text-lg mt-2 opacity-50 text-white">
-                İllik istifadə limiti olmayan tam funksional rəqəmsal debet
-                kartdır.
-              </p>
-            </div>
-          </Link>
-          <Link to={"/"}>
-            <div>
-              <img src={card} alt="card" className="h-[186px]" />
-              <h5 className="text-2xl font-semibold text-white mt-5">
-                Tam DigiCard Debet
-              </h5>
-              <p className="text-lg mt-2 opacity-50 text-white">
-                İllik istifadə limiti olmayan tam funksional rəqəmsal debet
-                kartdır.
-              </p>
-            </div>
-          </Link>
+          {relatedCards.slice(0, 3).map((item, index) => (
+            <Link to={`/cards/${item.id}?type=${item.type}`} key={index}>
+              <div>
+                <img src={item.image} alt="card" className="h-[186px]" />
+                <h5 className="text-2xl font-semibold text-white mt-5">
+                  {item.name}
+                </h5>
+                <p className="text-lg mt-2 opacity-50 text-white">
+                  {item.summary}
+                </p>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>

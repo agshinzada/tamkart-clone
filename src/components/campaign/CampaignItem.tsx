@@ -11,7 +11,7 @@ const CampaignItem = ({
   const navigate = useNavigate();
   return (
     <div className="border-b border-b-csecondary pb-12">
-      <Link to={"/"} className="group">
+      <Link to={`/campaigns/${data.id}`} className="group">
         <div
           className={`flex ${
             type === "section" ? "flex-col" : "flex-row gap-8"

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { PartnerDetail } from "../../types/partner";
 
 const PartnerDetailItem = ({
@@ -7,11 +8,13 @@ const PartnerDetailItem = ({
   data: PartnerDetail;
   type: string;
 }) => {
+  const navigate = useNavigate();
   return (
     <div
-      className={`flex flex-col justify-between gap-9  py-6 rounded-3xl bg-csecondary w-fit ${
+      className={`flex flex-col justify-between gap-9 cursor-pointer  py-6 rounded-3xl bg-csecondary w-fit ${
         type === "page" ? "w-full h-[208px] px-6" : "min-w-[280px] px-8"
       } `}
+      onClick={() => navigate(`/partners/${data.id}`)}
     >
       <div className="flex justify-between gap-8">
         <img
