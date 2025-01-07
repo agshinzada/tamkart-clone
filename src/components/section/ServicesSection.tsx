@@ -47,7 +47,7 @@ const ServicesSection = () => {
           <SectionTitle title="Kart üzrə xidmətlər" />
           <div className="flex gap-4">
             <span
-              className="rounded-full p-4 bg-csecondary rotate-180"
+              className="rounded-full p-4 bg-csecondary rotate-180 cursor-pointer"
               data-test-id="span"
             >
               <svg
@@ -64,7 +64,10 @@ const ServicesSection = () => {
                 ></path>
               </svg>
             </span>
-            <span className="rounded-full p-4 bg-cprimary" data-test-id="span">
+            <span
+              className="rounded-full p-4 bg-cprimary cursor-pointer"
+              data-test-id="span"
+            >
               <svg
                 width="18"
                 //   height="15"

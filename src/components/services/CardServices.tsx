@@ -17,7 +17,7 @@ const CardServices = ({ data }: { data: ServiceItemType[] }) => {
       <Slider {...settings}>
         {data.map((item, index) => (
           <div key={index}>
-            <CardServiceItem data={item} />
+            <CardServiceItem data={item} type="section" />
           </div>
         ))}
       </Slider>
