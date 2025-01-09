@@ -1,7 +1,6 @@
 import TextSlider from "../TextSlider";
-import card1 from "../../assets/card1.png";
-import card2 from "../../assets/card2.png";
 import DetailSlider from "../DetailSlider";
+import RotatingImageOnScroll from "../RotatingImageOnScroll";
 const IntroSection = () => {
   return (
     <section className="max-w-[1040px] mx-auto flex flex-col items-center">
@@ -9,8 +8,10 @@ const IntroSection = () => {
         TamKart
         <TextSlider />
       </h1>
-      <p className="text-3xl text-white font-semibold">İstədiyin tam budur!</p>
-      <div className="px-12 py-8 mt-16 bg-csecondary rounded-3xl flex gap-14 items-center">
+      <p className="text-3xl mt-3 text-white font-semibold">
+        İstədiyin tam budur!
+      </p>
+      <div className="px-12 py-8 mt-16 bg-csecondary rounded-3xl flex gap-7 items-center">
         <DetailSlider />
         <div>
           <button className="py-6 px-7 whitespace-nowrap bg-cprimary font-semibold rounded-2xl text-cdark text-xl flex items-center justify-start group max-h-[72px] max-w-[2300px]">
@@ -42,16 +43,17 @@ const IntroSection = () => {
         </div>
       </div>
       <div className="relative w-[510px] h-[316px] mt-[80px] group">
-        <img
-          src={card1}
+        <RotatingImageOnScroll />
+        {/* <img
+          src="https://tamkart.az/_next/static/media/tamdigi.988304eb.png"
           alt="card"
           className="w-[396px] absolute bottom-0 group-hover:-translate-y-16 group-hover:-translate-x-6 transition-all duration-500 z-10"
-        />
-        <img
-          src={card2}
+        /> */}
+        {/* <img
+          src="https://tamkart.az/_next/static/media/tampremiumvisa.fd5fe401.png"
           alt="card"
           className="w-[396px] absolute top-0 right-0 group-hover:translate-x-6 group-hover:translate-y-16 transition-all duration-500"
-        />
+        /> */}
       </div>
     </section>
   );

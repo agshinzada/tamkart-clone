@@ -13,7 +13,7 @@ const TextSlider = () => {
     arrows: false,
   };
   return (
-    <Slider {...settings} className="w-48">
+    <Slider {...settings} className="w-[170px]">
       <div>
         <h2 className="text-cprimary">debit</h2>
       </div>

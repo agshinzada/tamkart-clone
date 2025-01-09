@@ -28,7 +28,8 @@ const AdvantageSection = () => {
         <div>
           <TabButton btnStatus={btnStatus} handleBtn={handleBtn} />
           <div className="mt-14">
-            <img src={card1} alt="card" className="w-[396px] mb-5" />
+            <div className="w-[396px] h-[250px] mb-5" />
+            {/* <img src={card1} alt="card" className="w-[396px] mb-5" /> */}
             <SectionButton title="Bütün kartlar" />
           </div>
         </div>

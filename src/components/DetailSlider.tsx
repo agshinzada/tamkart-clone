@@ -14,8 +14,8 @@ const DetailSlider = () => {
   };
 
   return (
-    <Slider {...settings}>
-      <div className="w-fit">
+    <Slider {...settings} className="max-w-[580px]">
+      <div className="w-fit ">
         <div className="flex gap-14 w-fit">
           <div className="flex flex-col items-start">
             <p className="text-white text-[22px] font-semibold">7%</p>
