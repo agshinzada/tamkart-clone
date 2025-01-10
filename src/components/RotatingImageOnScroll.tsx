@@ -13,8 +13,8 @@ const RotatingImageOnScroll = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const rotateValue = Math.min((scrollPosition / 572) * 360, 360);
-  const translateYValue = Math.min(scrollPosition, 572);
+  const rotateValue = Math.min((scrollPosition / 540) * 360, 360);
+  const translateYValue = Math.min(scrollPosition, 540);
   const translateXValue = Math.min(scrollPosition, 276);
 
   const fadeTranslateXValue = Math.min(scrollPosition * 1.2, 300);

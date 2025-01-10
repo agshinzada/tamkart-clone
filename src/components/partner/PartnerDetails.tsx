@@ -5,7 +5,7 @@ import PartnerDetailItem from "./PartnerDetailItem";
 const settings = {
   dots: false,
   infinite: true,
-  slidesToShow: 5,
+  slidesToShow: 6,
   slidesToScroll: 1,
   autoplay: true,
   speed: 4000,
@@ -13,6 +13,15 @@ const settings = {
   cssEase: "linear",
   arrows: false,
   responsive: [
+    {
+      breakpoint: 1800,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        dots: false,
+        infinite: true,
+      },
+    },
     {
       breakpoint: 1600,
       settings: {

@@ -24,3 +24,7 @@ html {
 .active {
   color: #76fa57;
 }
+
+.slick-current svg path {
+  stroke: #76fa57;
+}

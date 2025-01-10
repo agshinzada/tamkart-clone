@@ -4,7 +4,7 @@ const TextSlider = () => {
   const settings = {
     vertical: true, // Dikey kaydırma
     autoplay: true, // Otomatik oynatma
-    autoplaySpeed: 4000, // 2 saniyede bir geçiş
+    autoplaySpeed: 3500, // 2 saniyede bir geçiş
     infinite: true, // Sonsuz döngü
     speed: 500, // Geçiş hızı
     slidesToShow: 1, // Aynı anda gösterilen slayt sayısı

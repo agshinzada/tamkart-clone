@@ -3,6 +3,7 @@ import card1 from "../../assets/card1.png";
 import SectionButton from "./SectionButton";
 import TabButton from "../TabButton";
 import { TabButtonTypes } from "../../types/button";
+import AdvantageSlider from "../AdvantageSlider";
 
 const AdvantageSection = () => {
   const [btnStatus, setBtnStatus] = useState({
@@ -20,10 +21,11 @@ const AdvantageSection = () => {
           <h4 className="text-white font-bold text-5xl">
             Üstünlüklər <br /> saymaqla bitmir
           </h4>
-          <p className="text-xl font-medium opacity-50 text-white mt-8">
+          <p className="text-xl font-normal opacity-50 text-white mt-8">
             Tam DigiCard istər fiziki kart, istərsə də rəqəmsal formada əldə edə
             biləcəyiniz debet kartıdır.
           </p>
+          <AdvantageSlider />
         </div>
         <div>
           <TabButton btnStatus={btnStatus} handleBtn={handleBtn} />
