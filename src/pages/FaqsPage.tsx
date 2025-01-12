@@ -36,7 +36,7 @@ const FaqsPage = () => {
   }, []);
 
   return (
-    <section className="max-w-[1040px] mx-auto pt-36">
+    <section className="max-w-[1040px] mx-auto pt-32">
       <div className="flex justify-between items-center">
         <PageTitle title="FAQ" />
         <div className="relative">
@@ -49,7 +49,7 @@ const FaqsPage = () => {
           />
         </div>
       </div>
-      <div className="mt-10 flex flex-col gap-5">
+      <div className="mt-10 flex flex-col gap-4">
         {filteredData.map((item, index) => (
           <div
             className="p-8 rounded-3xl bg-csecondary text-white flex flex-col gap-4"

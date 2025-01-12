@@ -21,6 +21,10 @@ const PartnersPage = () => {
 
   useEffect(() => {
     getPartners();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }, []);
 
   return (
@@ -29,7 +33,7 @@ const PartnersPage = () => {
         <PageTitle title="Partnyorlar" />
         <Button title="Partnyor ol" />
       </div>
-      <div className="flex gap-4 items-center mt-10">
+      <div className="flex gap-4 items-center mt-12">
         <div className="relative">
           <img src={search} alt="icon" className="absolute top-4 left-5" />
           <input
@@ -105,7 +109,7 @@ const PartnersPage = () => {
           Təmizlə
         </button>
       </div>
-      <p className="text-[28px] text-white font-bold mt-10">Top partnyorlar</p>
+      <p className="text-[28px] text-white font-bold mt-12">Top partnyorlar</p>
       <div className="grid grid-cols-4 gap-7 mt-10">
         {data.map((item, index) => (
           <PartnerDetailItem data={item} type="page" key={index} />

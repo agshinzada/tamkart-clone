@@ -1,4 +1,3 @@
-import { div } from "framer-motion/client";
 import Slider from "react-slick";
 
 const AdvantageSlider = () => {

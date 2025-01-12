@@ -1,8 +1,14 @@
-const SectionButton = ({ title }: { title: string }) => {
+import { useNavigate } from "react-router-dom";
+
+const SectionButton = ({ title, link }: { title: string; link: string }) => {
+  const navigate = useNavigate();
   return (
-    <button className="py-6 px-0 whitespace-nowrap font-semibold rounded-2xl text-white text-[22px] flex items-center justify-start group max-h-[72px] max-w-[2300px]">
+    <button
+      className="py-6 px-0 whitespace-nowrap font-semibold rounded-2xl text-white text-[22px] flex items-center justify-start group max-h-[72px] max-w-[2300px]"
+      onClick={() => navigate(link)}
+    >
       {title}
-      <span className="tablet:hidden tablet-large:block">
+      <span className="">
         <div className="w-8 h-8 rounded-full center relative ">
           <span
             className="absolute top-1/2 left-4 -translate-x-1/2 -translate-y-1/2 group-hover:left-7 transition-all duration-500 z-10"
@@ -22,7 +28,7 @@ const SectionButton = ({ title }: { title: string }) => {
               ></path>
             </svg>
           </span>
-          <div className="w-8 h-8 rounded-full center ml-3 bg-white opacity-20"></div>
+          <div className="w-8 h-8 rounded-full center ml-3 bg-white/10"></div>
         </div>
       </span>
     </button>

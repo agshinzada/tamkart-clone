@@ -11,6 +11,10 @@ export default {
         cthird: "#3F3E40",
         cfour: "#2D2D2E",
       },
+      screens: {
+        tablet: "768px",
+        laptop: "1024px",
+      },
     },
   },
   plugins: [],

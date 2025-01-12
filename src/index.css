@@ -28,3 +28,7 @@ html {
 .slick-current svg path {
   stroke: #76fa57;
 }
+
+/* .service-slider .slick-list {
+  transform: translate3d(320px, 0px, 0px);
+} */

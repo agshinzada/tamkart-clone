@@ -17,7 +17,7 @@ const Cards = ({ type }: { type: string }) => {
   }, [type]);
 
   return (
-    <div className="flex w-full flex-col gap-10 mt-10">
+    <div className="flex w-full flex-col gap-11 mt-10">
       {cards.map((card, index) => (
         <CardItem data={card} key={index} />
       ))}

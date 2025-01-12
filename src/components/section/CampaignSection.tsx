@@ -23,7 +23,7 @@ const CampaignSection = () => {
       <div className="max-w-[1040px] mx-auto flex flex-col items-start mt-36">
         <div className="flex justify-between w-full items-center">
           <SectionTitle title="Kampaniyalar" />
-          <SectionButton title="Bütün kampaniyalar" />
+          <SectionButton title="Bütün kampaniyalar" link="/campaigns" />
         </div>
         <Campaigns data={data} type="section" />
       </div>

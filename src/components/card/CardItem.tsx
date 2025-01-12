@@ -12,7 +12,7 @@ const CardItem = ({ data }: { data: CardItemTypes }) => {
       <div className="flex flex-col gap-9">
         <div className="flex flex-col gap-2 text-white">
           <h4 className="text-[32px] font-bold">{data.name}</h4>
-          <p className="text-lg opacity-50">{data.summary}</p>
+          <p className="text-lg opacity-50 max-w-[500px]">{data.summary}</p>
         </div>
         <div className="flex gap-4 items-center justify-between text-white">
           <div className="flex flex-col justify-start">

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Button from "../Button";
-import PartnerDetails from "../partner/PartnerDetails";
 import SectionButton from "./SectionButton";
 import { PartnerDetail } from "../../types/partner";
+import PartnersSlider from "../partner/PartnersSlider";
 
 const PartnersSection = () => {
   const [data, setData] = useState<PartnerDetail[]>([]);
@@ -32,11 +32,11 @@ const PartnersSection = () => {
         </div>
         <div className="flex justify-between w-full items-center mt-12">
           <Button title="Partnyor ol" />
-          <SectionButton title="Bütün partnyorlar" />
+          <SectionButton title="Bütün partnyorlar" link="/partners" />
         </div>
       </div>
       <div className="px-10">
-        <PartnerDetails data={data} />
+        <PartnersSlider data={data} />
       </div>
     </section>
   );

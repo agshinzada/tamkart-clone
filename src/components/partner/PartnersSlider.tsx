@@ -42,18 +42,16 @@ const settings = {
     },
   ],
 };
-const PartnerDetails = ({ data }: { data: PartnerDetail[] }) => {
+const PartnersSlider = ({ data }: { data: PartnerDetail[] }) => {
   return (
     <div className="w-full mt-12">
       <Slider {...settings}>
         {data.map((item, index) => (
-          <div key={index}>
-            <PartnerDetailItem data={item} />
-          </div>
+          <PartnerDetailItem type="section" data={item} key={index} />
         ))}
       </Slider>
     </div>
   );
 };
 
-export default PartnerDetails;
+export default PartnersSlider;

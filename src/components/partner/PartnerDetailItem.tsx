@@ -12,7 +12,9 @@ const PartnerDetailItem = ({
   return (
     <div
       className={`flex flex-col justify-between gap-9 cursor-pointer  py-6 rounded-3xl bg-csecondary w-fit ${
-        type === "page" ? "w-full h-[208px] px-6" : "min-w-[280px] px-8"
+        type === "page"
+          ? "w-full h-[208px] px-6"
+          : "min-w-[280px] px-8 max-w-[230px] w-[230px]"
       } `}
       onClick={() => navigate(`/partners/${data.id}`)}
     >
