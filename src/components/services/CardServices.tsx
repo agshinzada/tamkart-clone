@@ -10,20 +10,34 @@ const settings = {
   slidesToScroll: 1,
   arrows: false,
   centerMode: false,
+  responsive: [
+    {
+      breakpoint: 1800,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 1600,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 1300,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 };
 const CardServices = ({ data }: { data: ServiceItemType[] }) => {
   return (
-    <div className="px-10 mt-10 service-slider">
+    <div className="mt-10">
       <Slider {...settings}>
-        <div
-          className={`bg-transparent p-8 rounded-3xl
-        text-white flex-1`}
-        >
-          <div className="flex flex-col gap-2 mt-5">
-            <h5 className="font-semibold"></h5>
-            <p className="opacity-50 text-[16px]"></p>
-          </div>
-        </div>
         {data.map((item, index) => (
           <div key={index}>
             <CardServiceItem data={item} type="section" />

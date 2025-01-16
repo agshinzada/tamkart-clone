@@ -6,6 +6,7 @@ import face from "../assets/face-share.svg";
 import x from "../assets/x-share.svg";
 import linke from "../assets/linke-share.svg";
 import SectionTitle from "../components/section/SectionTitle";
+import RelatedCampaignSlider from "../components/campaign/RelatedCampaignSlider";
 
 const CampaignDetailPage = () => {
   const params = useParams();
@@ -38,7 +39,7 @@ const CampaignDetailPage = () => {
   }, [params]);
 
   return (
-    <section className="max-w-[1040px] mx-auto pt-36">
+    <section className="max-w-[1040px] mx-auto pt-36 px-10 laptop:px-0">
       <BackBtn />
 
       <img
@@ -73,29 +74,7 @@ const CampaignDetailPage = () => {
 
       <div className="mt-28">
         <SectionTitle title="Digər kampaniyalar" />
-        <div className="flex gap-4 mt-10 justify-between">
-          {relatedCampaigns.slice(0, 3).map((item, index) => (
-            <Link to={`/campaigns/${item.id}`} key={index}>
-              <div className="w-[300px]">
-                <img
-                  src={item.image}
-                  alt="card"
-                  className="w-full rounded-2xl"
-                />
-                <h5 className="text-xl font-semibold text-white mt-5">
-                  {item.name}
-                </h5>
-                {item.date.trim() === "" ? (
-                  ""
-                ) : (
-                  <p className="text-[14px] bg-cthird w-fit px-3 py-1 rounded-full font-[500] opacity-50 mt-3">
-                    {item.date}
-                  </p>
-                )}
-              </div>
-            </Link>
-          ))}
-        </div>
+        <RelatedCampaignSlider data={relatedCampaigns} />
       </div>
     </section>
   );

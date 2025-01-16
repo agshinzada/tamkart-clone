@@ -25,7 +25,7 @@ const CardsPage = () => {
   }, []);
 
   return (
-    <section className="max-w-[1040px] mx-auto pt-36">
+    <section className="max-w-[1040px] mx-auto pt-36 laptop:px-0 px-10">
       <div className="flex justify-between items-center">
         <PageTitle title="Kartlar" />
         <TabButton btnStatus={btnStatus} handleBtn={handleBtn} />

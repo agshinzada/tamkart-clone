@@ -36,14 +36,14 @@ const FaqsPage = () => {
   }, []);
 
   return (
-    <section className="max-w-[1040px] mx-auto pt-32">
-      <div className="flex justify-between items-center">
+    <section className="max-w-[1040px] mx-auto pt-32 px-10 laptop:px-0">
+      <div className="flex laptop:justify-between laptop:items-center flex-col laptop:flex-row gap-10 laptop:gap-0">
         <PageTitle title="FAQ" />
         <div className="relative">
           <img src={search} alt="icon" className="absolute top-4 left-5" />
           <input
             type="text"
-            className="min-w-[346px] bg-csecondary py-[14px] pl-14 pr-4 text-white placeholder:text-white outline-none rounded-[100px]"
+            className="min-w-[346px] w-full laptop:w-fit bg-csecondary py-[14px] pl-14 pr-4 text-white placeholder:text-white outline-none rounded-[100px]"
             placeholder="Axtar"
             onChange={handleSearch}
           />

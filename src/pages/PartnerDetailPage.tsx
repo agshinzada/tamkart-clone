@@ -27,7 +27,7 @@ const PartnerDetailPage = () => {
   }, [params]);
 
   return (
-    <section className="max-w-[1040px] mx-auto pt-36">
+    <section className="max-w-[1040px] mx-auto pt-36 px-10 laptop:px-0">
       <BackBtn />
       <div className="flex gap-6 items-center mt-14">
         <div className="w-[88px] h-[88px]">

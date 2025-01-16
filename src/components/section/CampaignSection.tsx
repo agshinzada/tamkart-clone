@@ -1,4 +1,5 @@
 import Campaigns from "../campaign/Campaigns";
+import SectionCampaignItem from "../campaign/SectionCampaignItem";
 import SectionButton from "./SectionButton";
 import SectionTitle from "./SectionTitle";
 import { useEffect, useState } from "react";
@@ -19,13 +20,17 @@ const CampaignSection = () => {
   }, []);
 
   return (
-    <section>
-      <div className="max-w-[1040px] mx-auto flex flex-col items-start mt-36">
-        <div className="flex justify-between w-full items-center">
+    <section className="px-10 laptop:px-0">
+      <div className="max-w-[1040px] mx-auto flex flex-col items-start laptop:mt-36 mt-16">
+        <div className="flex justify-between w-full items-center mb-7">
           <SectionTitle title="Kampaniyalar" />
           <SectionButton title="Bütün kampaniyalar" link="/campaigns" />
         </div>
-        <Campaigns data={data} type="section" />
+        <div className="grid laptop:grid-cols-2 grid-cols-1 laptop:gap-12 gap-8">
+          {data.map((item, index) => (
+            <SectionCampaignItem data={item} key={index} />
+          ))}
+        </div>
       </div>
     </section>
   );

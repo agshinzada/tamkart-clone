@@ -21,7 +21,7 @@ const RotatingImageOnScroll = () => {
   const fadeOpacityValue = Math.max(1 - scrollPosition / 600, 0);
 
   return (
-    <div className="h-200vh relative">
+    <div className="h-200vh relative hidden laptop:block">
       <motion.img
         src="https://tamkart.az/_next/static/media/tamdigi.988304eb.png"
         alt="Rotating Image"

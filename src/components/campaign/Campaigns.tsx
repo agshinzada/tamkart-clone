@@ -9,11 +9,7 @@ const Campaigns = ({
   type: string;
 }) => {
   return (
-    <div
-      className={`grid ${
-        type === "section" ? "grid-cols-2" : "grid-cols-1"
-      } gap-10 w-full mt-9`}
-    >
+    <div className="flex flex-col gap-10 w-full mt-9">
       {data.map((item, index) => (
         <CampaignItem key={index} data={item} type={type} />
       ))}
