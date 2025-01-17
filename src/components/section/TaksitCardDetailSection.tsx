@@ -1,15 +1,15 @@
 import card from "../../assets/card3.webp";
 const TaksitCardDetailSection = () => {
   return (
-    <section className="max-w-[1040px] mx-auto flex flex-col items-start laptop:mt-32 mt-24 laptop:px-0 px-10">
-      <div className="flex items-center gap-8 h-[286px] w-full laptop:flex-row flex-col">
-        <div className="laptop:w-[75%] w-full bg-csecondary laptop:p-12 p-9 justify-between rounded-3xl flex items-center">
-          <div className="text-white">
-            <p className="text-[32px] font-bold leading-10">
+    <section className="max-w-[1040px] mx-auto flex flex-col items-start laptop:mt-32 tablet:mt-24 mt-32 laptop:px-0 tablet:px-10 px-4">
+      <div className="flex items-center tablet:gap-8 gap-5 h-[286px] w-full laptop:flex-row flex-col">
+        <div className="relative laptop:w-[75%] w-full bg-csecondary laptop:p-12 tablet:p-9 p-5 justify-between rounded-xl tablet:rounded-3xl flex items-center">
+          <div className="text-white w-full tablet:w-fit mt-28 tablet:mt-0">
+            <p className="text-2xl tablet:text-[32px] font-bold leading-10">
               TamKart <span className="text-cprimary">taksit</span>
               <br /> rahatlığınızı düşünür
             </p>
-            <ul className="text-[16px] flex flex-col gap-2 mt-7">
+            <ul className="text-sm tablet:text-[16px] flex flex-col gap-2 mt-7">
               <li className="flex justify-between items-center">
                 <span className="opacity-60">Hər ödənişdən</span>{" "}
                 <span className="font-semibold">10%-dək kəşbek</span>
@@ -24,13 +24,22 @@ const TaksitCardDetailSection = () => {
               </li>
             </ul>
           </div>
-          <div>
-            <img src={card} alt="tamkart" width={280} />
-          </div>
+          <img
+            src={card}
+            alt="tamkart"
+            width={280}
+            className="absolute -top-80 tablet:hidden inset-0 m-auto"
+          />
+          <img
+            src={card}
+            alt="tamkart"
+            width={280}
+            className="hidden tablet:block"
+          />
         </div>
-        <button className="laptop:w-[25%] w-full flex flex-col gap-2 laptop:py-8 py-5 px-8 whitespace-nowrap bg-cprimary font-semibold rounded-2xl laptop:rounded-3xl text-cdark text-xl laptop:items-start items-center justify-start group h-full max-w-[2300px] hover:bg-caltertativ">
-          <span className="text-[22px]">İndi sifariş ver</span>
-          <span className="tablet:hidden tablet-large:block">
+        <button className="laptop:w-[25%] w-full flex flex-col gap-2 laptop:py-8 tablet:py-5 py-2 px-8 whitespace-nowrap bg-cprimary font-semibold rounded-xl tablet:rounded-2xl laptop:rounded-3xl text-cdark text-xl laptop:items-start items-center justify-start group h-full max-w-[2300px] hover:bg-caltertativ">
+          <span className="text-lg tablet:text-[22px]">İndi sifariş ver</span>
+          <span className="hidden laptop:block">
             <div className="w-8 h-8 rounded-full center relative">
               <span
                 className="absolute top-1/2 left-4 -translate-x-1/2 -translate-y-1/2 group-hover:left-7 transition-all duration-500 z-10"

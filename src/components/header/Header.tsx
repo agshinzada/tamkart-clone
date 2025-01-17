@@ -12,7 +12,7 @@ const Header = () => {
   }
 
   return (
-    <header className="fixed h-[80px] inset-0 w-full z-30 bg-cdark tablet:border-b border-b-csecondary px-5 tablet:px-10 pt-7 laptop:pt-0">
+    <header className="fixed h-[80px] inset-0 w-full z-30 bg-cdark tablet:border-b border-b-csecondary px-5 tablet:px-10 py-7 laptop:pt-0">
       <div className="max-w-[1040px] mx-auto w-full h-full ">
         <div className="flex justify-between items-center h-full w-full">
           <a href="/">

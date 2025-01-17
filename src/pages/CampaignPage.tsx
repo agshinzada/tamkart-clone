@@ -22,7 +22,7 @@ const CampaignPage = () => {
   }, []);
 
   return (
-    <section className="max-w-[1040px] mx-auto pt-36 px-10 laptop:px-0">
+    <section className="max-w-[1040px] mx-auto tablet:pt-36 pt-24 tablet:px-10 px-4 laptop:px-0">
       <PageTitle title="Kampaniyalar" />
       <div>
         <Campaigns data={data} type="page" />

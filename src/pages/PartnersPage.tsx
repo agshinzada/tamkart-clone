@@ -29,27 +29,34 @@ const PartnersPage = () => {
   }, []);
 
   return (
-    <section className="max-w-[1040px] mx-auto laptop:pt-48 pt-36 px-10 laptop:px-0">
+    <section className="relative max-w-[1040px] mx-auto laptop:pt-48 tablet:pt-36 pt-24 tablet:px-10 px-4 laptop:px-0">
       <div className="flex items-center justify-between">
         <PageTitle title="Partnyorlar" />
         <div className="flex gap-3 items-center">
           <span className="block laptop:hidden">
             <ClearBtn />
           </span>
-          <Button title="Partnyor ol" />
+          <div className="hidden tablet:block">
+            <Button title="Partnyor ol" size="w-fit" />
+          </div>
+          <div className="fixed w-full left-[42%] bottom-5 tablet:hidden">
+            <Button title="Partnyor ol" size="w-fit" />
+          </div>
         </div>
       </div>
       <PartnerFilter />
-      <p className="text-[28px] text-white font-bold mt-12">Top partnyorlar</p>
-      <div className="grid laptop:grid-cols-4 grid-cols-3 gap-7 mt-10">
+      <p className="text-[24px] tablet:text-[28px] text-white font-bold mt-12">
+        Top partnyorlar
+      </p>
+      <div className="grid laptop:grid-cols-4 grid-cols-3 tablet:gap-7 gap-3 mt-10">
         {data.map((item, index) => (
           <PartnerDetailItem data={item} type="page" key={index} />
         ))}
       </div>
-      <p className="text-[28px] text-white font-bold mt-10">
+      <p className="text-[24px] tablet:text-[28px] text-white font-bold mt-10">
         Bütün partnyorlar
       </p>
-      <div className="grid laptop:grid-cols-4 grid-cols-2 gap-7 mt-10">
+      <div className="grid laptop:grid-cols-4 grid-cols-2 tablet:gap-7 gap-3 mt-10">
         {data.map((item, index) => (
           <PartnerDetailItem data={item} type="page" key={index} />
         ))}

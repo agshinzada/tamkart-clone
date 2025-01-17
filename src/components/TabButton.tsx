@@ -9,15 +9,25 @@ type HandleBtnFunction = (btnStatus: {
 const TabButton = ({
   btnStatus,
   handleBtn,
+  size,
+  maxWidth,
 }: {
   btnStatus: TabButtonTypes;
   handleBtn: HandleBtnFunction;
+  size: string;
+  maxWidth?: string;
 }) => {
   return (
-    <div className="max-w-[232px]">
-      <div className="bg-csecondary rounded-xl p-2 flex justify-between">
+    <div className={`${maxWidth} w-full`}>
+      <div
+        className={`bg-csecondary  ${
+          size === "small" ? "p-2" : "p-2 "
+        } flex justify-between rounded-xl`}
+      >
         <button
-          className={`h-12 rounded-xl font-semibold flex items-center justify-center text-lg px-7 transition-all duration-300 ${
+          className={`${
+            size === "small" ? "w-1/2 h-8 rounded-lg" : "w-fit rounded-xl"
+          } h-12  font-semibold flex items-center justify-center text-lg px-7 transition-all duration-300 ${
             btnStatus.btn1
               ? "bg-cprimary text-black"
               : "text-white opacity-50 hover:opacity-80"
@@ -27,7 +37,9 @@ const TabButton = ({
           Debet
         </button>
         <button
-          className={`h-12 rounded-xl font-semibold flex items-center justify-center text-lg px-7 transition-all duration-300 ${
+          className={`${
+            size === "small" ? "w-1/2 h-8 rounded-lg" : "w-fit rounded-xl"
+          } h-12 font-semibold flex items-center justify-center text-lg px-7 transition-all duration-300 ${
             btnStatus.btn2
               ? "bg-cprimary text-black"
               : "text-white opacity-50 hover:opacity-80"

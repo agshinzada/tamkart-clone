@@ -16,7 +16,7 @@ const DetailSlider = () => {
   return (
     <Slider {...settings} className="tablet:max-w-[580px] w-full">
       <div className="laptop:w-fit w-full">
-        <div className="flex tablet:flex-row flex-col tablet:justify-normal justify-center gap-3 tablet:gap-14 w-full laptop:w-fit">
+        <div className="flex tablet:flex-row flex-col tablet:justify-normal justify-center gap-1 tablet:gap-14 w-full laptop:w-fit">
           <div className="flex tablet:flex-col items-start flex-row justify-between">
             <p className="text-white text-sm tablet:text-[22px] font-semibold order-1 tablet:order-0">
               7%
@@ -44,7 +44,7 @@ const DetailSlider = () => {
         </div>
       </div>
       <div className="laptop:w-fit w-full">
-        <div className="flex tablet:gap-14 gap-3 tablet:flex-row flex-col tablet:justify-normal justify-center w-full laptop:w-fit">
+        <div className="flex tablet:gap-14 gap-1 tablet:flex-row flex-col tablet:justify-normal justify-center w-full laptop:w-fit">
           <div className="flex tablet:flex-col flex-row items-start justify-between">
             <p className="text-white text-sm tablet:text-[22px] font-semibold order-1 tablet:order-0">
               10 %-dək kəşbek

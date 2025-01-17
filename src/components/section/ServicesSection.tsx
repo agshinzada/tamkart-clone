@@ -1,4 +1,3 @@
-import CardServices from "../services/CardServices";
 import SectionTitle from "./SectionTitle";
 import icon1 from "../../assets/services/1.svg";
 import icon2 from "../../assets/services/2.svg";
@@ -43,11 +42,13 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="mt-32 px-10 laptop:px-0">
-      <div className="w-full max-w-[1040px] mx-auto">
+    <section className="tablet:mt-32 mt-16">
+      <div className="w-full max-w-[1040px] mx-auto px-4 tablet:px-10 laptop:px-0">
         <div className="flex items-center justify-between">
           <SectionTitle title="Kart üzrə xidmətlər" />
-          <SlideControlBtn />
+          <div className="hidden tablet:block">
+            <SlideControlBtn />
+          </div>
         </div>
       </div>
       <CardServiceSlider data={services} />

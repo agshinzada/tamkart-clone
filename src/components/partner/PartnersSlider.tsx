@@ -1,55 +1,43 @@
-import Slider from "react-slick";
+import { useEffect, useRef } from "react";
 import { PartnerDetail } from "../../types/partner";
 import PartnerDetailItem from "./PartnerDetailItem";
 
-const settings = {
-  dots: false,
-  infinite: true,
-  slidesToShow: 6,
-  slidesToScroll: 1,
-  autoplay: true,
-  speed: 4000,
-  autoplaySpeed: 1000,
-  cssEase: "linear",
-  arrows: false,
-  responsive: [
-    {
-      breakpoint: 1800,
-      settings: {
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        dots: false,
-        infinite: true,
-      },
-    },
-    {
-      breakpoint: 1600,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        dots: false,
-        infinite: true,
-      },
-    },
-    {
-      breakpoint: 1300,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        dots: false,
-        infinite: true,
-      },
-    },
-  ],
-};
 const PartnersSlider = ({ data }: { data: PartnerDetail[] }) => {
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  const cloneData = [...data, ...data]; // Sonsuz döngü için data'yı ikiye katla
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+
+    if (!slider) return;
+
+    // Scroll sürekli hareket etsin
+    const interval = setInterval(() => {
+      slider.scrollLeft += 1; // Hızı ayarlamak için artırabilirsiniz
+
+      // Eğer son konuma ulaşırsa başa sar
+      if (slider.scrollLeft >= slider.scrollWidth / 2) {
+        slider.scrollLeft = 0;
+      }
+    }, 16); // ~60fps
+
+    return () => {
+      clearInterval(interval); // Bileşen unmount olduğunda interval'i temizle
+    };
+  }, []);
+
   return (
-    <div className="w-full mt-12">
-      <Slider {...settings}>
-        {data.map((item, index) => (
-          <PartnerDetailItem type="section" data={item} key={index} />
+    <div className="tablet:px-3 overflow-hidden mt-8">
+      <div
+        ref={sliderRef}
+        className="flex overflow-x-auto space-x-4 scrollbar-hide"
+        style={{ willChange: "scroll-position" }} // Performans için
+      >
+        {cloneData.map((item, index) => (
+          <PartnerDetailItem data={item} type="section" key={index} />
         ))}
-      </Slider>
+      </div>
     </div>
   );
 };

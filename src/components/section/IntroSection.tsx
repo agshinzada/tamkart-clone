@@ -3,7 +3,7 @@ import DetailSlider from "../DetailSlider";
 import RotatingImageOnScroll from "../RotatingImageOnScroll";
 const IntroSection = () => {
   return (
-    <section className="max-w-[1040px] mx-auto flex flex-col items-center px-10 laptop:px-0">
+    <section className="max-w-[1040px] mx-auto flex flex-col items-center px-4 tablet:px-10 laptop:px-0">
       <div className="tablet:hidden relative w-[510px] h-[250px]  tablet:h-[316px]">
         <img
           src="https://tamkart.az/_next/static/media/tamdigi.988304eb.png"
@@ -23,7 +23,7 @@ const IntroSection = () => {
       <p className="text-lg laptop:text-3xl tablet:text-2xl mt-0 laptop:mt-3 text-white tablet:font-semibold">
         İstədiyin tam budur!
       </p>
-      <div className="px-8 laptop:px-12 py-8 laptop:mt-16 mt-10 bg-csecondary rounded-3xl flex flex-col laptop:flex-row gap-7 items-center w-full max-w-[500px] tablet:max-w-full tablet:w-fit">
+      <div className="px-5 tablet:p-8 laptop:px-12 py-5 laptop:mt-16 mt-10 bg-csecondary rounded-xl laptop:rounded-3xl flex flex-col laptop:flex-row gap-7 items-center w-full max-w-[500px] tablet:max-w-full tablet:w-fit">
         <DetailSlider />
         <button className="tablet:py-6 py-3 px-7 whitespace-nowrap bg-cprimary font-semibold tablet:rounded-2xl rounded-xl text-cdark text-lg tablet:text-xl flex items-center laptop:justify-start justify-center group max-h-[72px] max-w-[2300px] laptop:w-fit w-full">
           İndi sifariş et

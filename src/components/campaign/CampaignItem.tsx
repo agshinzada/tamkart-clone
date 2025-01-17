@@ -4,10 +4,10 @@ import { CampaignItemType } from "../../types/campaign";
 const CampaignItem = ({ data }: { data: CampaignItemType }) => {
   const navigate = useNavigate();
   return (
-    <div className="border-b border-b-csecondary pb-12">
+    <div className="tablet:border-b tablet:border-b-csecondary tablet:pb-12 pb-0">
       <Link to={`/campaigns/${data.id}`} className="group">
-        <div className="flex gap-8">
-          <div className="min-w-[340px] h-[217px] rounded-[20px] overflow-hidden">
+        <div className="flex tablet:flex-row flex-col tablet:gap-8 gap-4">
+          <div className="min-w-[340px] tablet:h-[217px] rounded-[20px] overflow-hidden">
             <img
               src={data.image}
               alt="kampaniya"
@@ -19,16 +19,20 @@ const CampaignItem = ({ data }: { data: CampaignItemType }) => {
               {data.date.trim() === "" ? (
                 ""
               ) : (
-                <p className="text-[14px] bg-cthird w-fit px-3 py-1 rounded-full font-[500] opacity-50 mb-2">
+                <p className="text-[14px] bg-cthird w-fit px-3 tablet:py-1 py-2 rounded-full font-[500] opacity-50 mb-2">
                   {data.date}
                 </p>
               )}
-              <p className="text-2xl font-semibold">{data.name}</p>
-              <p className="text-[16px] opacity-50">{data.summary}</p>
+              <p className="text-xl tablet:text-2xl font-semibold">
+                {data.name}
+              </p>
+              <p className="text-sm tablet:text-[16px] opacity-50">
+                {data.summary}
+              </p>
             </div>
             <button
               type="button"
-              className="px-6 py-3 text-sm h-fit w-fit bg-csecondary text-white rounded-xl font-semibold group-hover:text-black group-hover:bg-cprimary transition-all duration-300"
+              className="hidden tablet:block px-6 py-3 text-sm h-fit w-fit bg-csecondary text-white rounded-xl font-semibold group-hover:text-black group-hover:bg-cprimary transition-all duration-300"
               onClick={() => navigate(`${data.id}`)}
             >
               Daha ətraflı

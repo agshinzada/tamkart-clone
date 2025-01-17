@@ -25,10 +25,15 @@ const CardsPage = () => {
   }, []);
 
   return (
-    <section className="max-w-[1040px] mx-auto pt-36 laptop:px-0 px-10">
-      <div className="flex justify-between items-center">
+    <section className="max-w-[1040px] mx-auto tablet:pt-36 pt-24 laptop:px-0 tablet:px-10 px-4">
+      <div className="flex tablet:flex-row flex-col justify-between tablet:items-center">
         <PageTitle title="Kartlar" />
-        <TabButton btnStatus={btnStatus} handleBtn={handleBtn} />
+        <div className="hidden tablet:block">
+          <TabButton btnStatus={btnStatus} handleBtn={handleBtn} size="large" />
+        </div>
+        <div className="block tablet:hidden mt-3">
+          <TabButton btnStatus={btnStatus} handleBtn={handleBtn} size="small" />
+        </div>
       </div>
       <Cards type={cardType} />
     </section>

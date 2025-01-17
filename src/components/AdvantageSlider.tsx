@@ -157,7 +157,7 @@ const AdvantageSlider = () => {
           </h5>
         </div>
       </Slider>
-      <div className="absolute w-full h-[95px]  bottom-0 bg-gradient-to-b from-cdark/0 to-cdark/100 z-10 pointer-events-none"></div>
+      <div className="absolute w-full tablet:h-[95px] h-[170px]  bottom-0 bg-gradient-to-b from-cdark/0 to-cdark/100 z-10 pointer-events-none"></div>
     </div>
   );
 };

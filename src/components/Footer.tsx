@@ -4,13 +4,13 @@ import instagram from "../assets/instagram.svg";
 import powered from "../assets/powered.svg";
 const Footer = () => {
   return (
-    <div className="w-full z-10 bg-cdark border-t border-t-csecondary h-[80px] mt-32 px-10 laptop:px-0">
+    <div className="w-full z-10 bg-cdark border-t border-t-csecondary py-4 tablet:mt-32 mt-16 tablet:px-10 px-4 laptop:px-0">
       <div className="max-w-[1040px] mx-auto w-full h-full">
         <div className="flex items-center justify-between w-full h-full">
           <a href="https://tamkart.az/">
             <img src={abb} alt="abb" />
           </a>
-          <div className="flex gap-2 items-center">
+          <div className="tablet:flex gap-2 items-center hidden">
             <p className="opacity-50">ABB Bank ⓒ {new Date().getFullYear()} </p>
             <img src={powered} className="w-24" alt="agshin.dev" />
           </div>
@@ -31,6 +31,10 @@ const Footer = () => {
               <img src={instagram} alt="abb" />
             </a>
           </div>
+        </div>
+        <div className="flex gap-2 items-center justify-center tablet:hidden mt-3">
+          <p className="opacity-50">ABB Bank ⓒ {new Date().getFullYear()} </p>
+          <img src={powered} className="w-24" alt="agshin.dev" />
         </div>
       </div>
     </div>

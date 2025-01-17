@@ -27,7 +27,7 @@ const CardServiceSlider = ({ data }: { data: ServiceItemType[] }) => {
   };
 
   return (
-    <div className="px-3 overflow-hidden mt-8">
+    <div className="tablet:px-3 overflow-hidden mt-8">
       <div
         className="flex overflow-x-auto scroll-smooth space-x-4 scrollbar-hide"
         onMouseDown={handleMouseDown}

@@ -36,8 +36,8 @@ const FaqsPage = () => {
   }, []);
 
   return (
-    <section className="max-w-[1040px] mx-auto pt-32 px-10 laptop:px-0">
-      <div className="flex laptop:justify-between laptop:items-center flex-col laptop:flex-row gap-10 laptop:gap-0">
+    <section className="max-w-[1040px] mx-auto tablet:pt-32 pt-24 tablet:px-10 px-4 laptop:px-0">
+      <div className="flex laptop:justify-between laptop:items-center flex-col laptop:flex-row tablet:gap-10 gap-6 laptop:gap-0">
         <PageTitle title="FAQ" />
         <div className="relative">
           <img src={search} alt="icon" className="absolute top-4 left-5" />
@@ -55,7 +55,9 @@ const FaqsPage = () => {
             className="p-8 rounded-3xl bg-csecondary text-white flex flex-col gap-4"
             key={index}
           >
-            <h3 className="font-bold text-xl">{item.question}</h3>
+            <h3 className="font-bold tablet:text-xl text-[16px]">
+              {item.question}
+            </h3>
             <p className="opacity-80 text-[16px]">{parse(item.answer)}</p>
           </div>
         ))}

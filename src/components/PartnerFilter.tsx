@@ -4,7 +4,7 @@ import ClearBtn from "./ClearBtn";
 
 const PartnerFilter = () => {
   return (
-    <div className="flex laptop:gap-4 gap-6 laptop:items-center mt-12 flex-col laptop:flex-row">
+    <div className="flex laptop:gap-4 tablet:gap-6 gap-4 laptop:items-center tablet:mt-12 mt-5 flex-col laptop:flex-row">
       <div className="relative">
         <img src={search} alt="icon" className="absolute top-4 left-5" />
         <input
@@ -14,8 +14,8 @@ const PartnerFilter = () => {
           // onChange={handleSearch}
         />
       </div>
-      <div className="w-full flex gap-4">
-        <div className="relative w-1/2 laptop:w-full">
+      <div className="w-full flex tablet:flex-row flex-col gap-4">
+        <div className="relative tablet:w-1/2 laptop:w-full">
           <img src={down} alt="icon" className="absolute top-2.5 right-5 w-8" />
           <select
             title="Kateqoriya"
@@ -30,7 +30,7 @@ const PartnerFilter = () => {
             <option value="audi">Audi</option>
           </select>
         </div>
-        <div className="relative w-1/2 laptop:w-fit">
+        <div className="relative tablet:w-1/2 laptop:w-fit">
           <img src={down} alt="icon" className="absolute top-2.5 right-4 w-8" />
           <select
             title="Taksitlər"
