@@ -1,50 +1,101 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Tamkart.az - Clone  
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a clone of the popular bank card service website [Tamkart.az ](https://tamkart.az). It is developed using modern web development technologies and aims to replicate the original site's design and core functionality using dummy data.
 
-## Expanding the ESLint configuration
+  
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Tech Stack
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **React.js** with **Typescript** and **React Router**: For building the frontend and managing routes.  
+- **Tailwind CSS**: For styling and creating a responsive layout.
+- **Framer motion**: For dynamic animations
+- **React slick**: For creating clear slides  
+- **Dummy Data**: Used to simulate real article content and categories
+
+
+## Demo
+
+Live version: [Tamkart - demo](https://tamkart-clone.vercel.app/)
+
+More detail: [Visit my website](https://agshin.dev/projects/tamkart)
+
+
+## Features
+
+- **Home Page**
+   - Showcases the main features of TamKart, including cashback offers, credit limits, and installment options.
+   - Provides quick access to card applications and highlights current promotions.
+
+- **Cards Page**
+   - Displays detailed information about the various TamKart options, such as TamKart Taksit and TamKart Debet.
+
+- **Partners Page**
+   - Lists partner merchants where TamKart holders can enjoy exclusive deals and cashback offers.
+   - Categorized by sectors like retail, electronics, and travel for user convenience.
+
+- **Campaigns Page**
+   - Features ongoing and upcoming promotional campaigns available to TamKart users.
+   - Provides details on campaign durations, benefits, and participation criteria.
+
+- **FAQ Page**
+   - Answers common questions regarding TamKart services, usage, and benefits.
+
+- **Card Detail Page**
+   - Offers in-depth information about a specific TamKart product, including its features, fees, and application process.
+ 
+- **Campaign Detail Page**
+   - Provides comprehensive details about a particular campaign, including terms, conditions, and how to participate.
+  
+- **Partner Detail Page**
+   - Gives detailed information about a specific partner merchant, including available offers, cashback percentages, and installment options.
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/agshinzada/tamkart-clone.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Go to the project directory
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+  cd tamkart-clone
 ```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+
+## Authors
+
+- [@agshinzada](https://www.github.com/agshinzada)
+
+
+## Feedback
+
+If you have any feedback, please reach out to us at agshinzada@gmail.com
+
+
+## Screenshots
+
+![App Screenshot](https://agshin.dev/images/tamkart-cover.webp)
+
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://agshin.dev/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/agshinzada/)
+[![twitter](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/agshin.dev)
+
