@@ -1,8 +1,7 @@
-import CardServiceItem from "./services/CardServiceItem";
-
-import serviceIcon1 from "../assets/serviceIcon1.svg";
-import serviceIcon2 from "../assets/serviceIcon2.svg";
-import serviceIcon3 from "../assets/serviceIcon3.svg";
+import serviceIcon1 from "../../assets/serviceIcon1.svg";
+import serviceIcon2 from "../../assets/serviceIcon2.svg";
+import serviceIcon3 from "../../assets/serviceIcon3.svg";
+import CardServiceItem from "../services/CardServiceItem";
 const PageServiceSlider = () => {
   return (
     <div className="py-10 tablet:px-3 px-0 overflow-hidden mt-8">

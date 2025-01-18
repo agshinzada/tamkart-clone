@@ -5,7 +5,7 @@ import icon3 from "../../assets/services/3.svg";
 import icon4 from "../../assets/services/4.svg";
 import icon5 from "../../assets/services/5.svg";
 import CardServiceSlider from "../services/CardServiceSlider";
-import SlideControlBtn from "../SlideControlBtn";
+import SlideControlBtn from "../button/SlideControlBtn";
 
 const services = [
   {

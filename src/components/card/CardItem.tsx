@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { CardItemTypes } from "../../types/card";
-import Button from "../Button";
+import Button from "../button/Button";
 
 const CardItem = ({ data }: { data: CardItemTypes }) => {
   const navigate = useNavigate();

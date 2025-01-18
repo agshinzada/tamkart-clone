@@ -34,6 +34,7 @@ const Footer = () => {
         </div>
         <div className="flex gap-2 items-center justify-center tablet:hidden mt-3">
           <p className="opacity-50">ABB Bank ⓒ {new Date().getFullYear()} </p>
+          <a href="https://agshin.dev/"></a>
           <img src={powered} className="w-24" alt="agshin.dev" />
         </div>
       </div>

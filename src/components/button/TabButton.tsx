@@ -1,4 +1,4 @@
-import { TabButtonTypes } from "../types/button";
+import { TabButtonTypes } from "../../types/button";
 
 type HandleBtnFunction = (btnStatus: {
   btn1: boolean;

@@ -1,11 +1,11 @@
-import Button from "../components/Button";
+import Button from "../components/button/Button";
 import PageTitle from "./PageTitle";
 
 import PartnerDetailItem from "../components/partner/PartnerDetailItem";
 import { useEffect, useState } from "react";
 import { PartnerDetail } from "../types/partner";
 import PartnerFilter from "../components/PartnerFilter";
-import ClearBtn from "../components/ClearBtn";
+import ClearBtn from "../components/button/ClearBtn";
 
 const PartnersPage = () => {
   const [data, setData] = useState<PartnerDetail[]>([]);
@@ -39,7 +39,7 @@ const PartnersPage = () => {
           <div className="hidden tablet:block">
             <Button title="Partnyor ol" size="w-fit" />
           </div>
-          <div className="fixed w-full left-[42%] bottom-5 tablet:hidden">
+          <div className="fixed w-full left-[36%] bottom-5 tablet:hidden">
             <Button title="Partnyor ol" size="w-fit" />
           </div>
         </div>
@@ -48,7 +48,7 @@ const PartnersPage = () => {
       <p className="text-[24px] tablet:text-[28px] text-white font-bold mt-12">
         Top partnyorlar
       </p>
-      <div className="grid laptop:grid-cols-4 grid-cols-3 tablet:gap-7 gap-3 mt-10">
+      <div className="grid laptop:grid-cols-4 tablet:grid-cols-3 mobile:grid-cols-2 grid-cols-1 tablet:gap-7 gap-3 mt-10">
         {data.map((item, index) => (
           <PartnerDetailItem data={item} type="page" key={index} />
         ))}
@@ -56,7 +56,7 @@ const PartnersPage = () => {
       <p className="text-[24px] tablet:text-[28px] text-white font-bold mt-10">
         Bütün partnyorlar
       </p>
-      <div className="grid laptop:grid-cols-4 grid-cols-2 tablet:gap-7 gap-3 mt-10">
+      <div className="grid laptop:grid-cols-4 tablet:grid-cols-3 mobile:grid-cols-2 grid-cols-1 tablet:gap-7 gap-3 mt-10">
         {data.map((item, index) => (
           <PartnerDetailItem data={item} type="page" key={index} />
         ))}

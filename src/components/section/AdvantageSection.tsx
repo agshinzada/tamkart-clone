@@ -1,8 +1,8 @@
 import { useState } from "react";
 import SectionButton from "./SectionButton";
-import TabButton from "../TabButton";
+import TabButton from "../button/TabButton";
 import { TabButtonTypes } from "../../types/button";
-import AdvantageSlider, { CardAdvantagesType } from "../AdvantageSlider";
+import AdvantageSlider, { CardAdvantagesType } from "../slider/AdvantageSlider";
 
 const advancedCardDetails: {
   [key: string]: {
@@ -30,7 +30,7 @@ const advancedCardDetails: {
       "Tamkart taksitlə 60 günədək güzəşt müddəti, 24 ayadək taksit imkanı, partnyor mağazalarda keşbek və digər üstünlüklər qazanacaqsınız.",
     image: "https://tamkart.az/_next/static/media/tamkartvisa.7514d8fe.png",
     advantages: [
-      "Hər iki ödəniş sistemindəI Visa, MC",
+      "Hər iki ödəniş sistemində: Visa, MC",
       "Pulsuz kart",
       "60 günədək güzəşt müddəti",
       "100% nağdlaşdırma limiti",

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import BackBtn from "../components/BackBtn";
+import BackBtn from "../components/button/BackBtn";
 import { PartnerDetail } from "../types/partner";
 import { useParams } from "react-router-dom";
 

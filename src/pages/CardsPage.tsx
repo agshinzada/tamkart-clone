@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Cards from "../components/card/Cards";
-import TabButton from "../components/TabButton";
+import TabButton from "../components/button/TabButton";
 import PageTitle from "./PageTitle";
 import { TabButtonTypes } from "../types/button";
 

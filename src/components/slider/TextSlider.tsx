@@ -25,26 +25,3 @@ const TextSlider = () => {
 };
 
 export default TextSlider;
-
-{
-  /* <Swiper
-        direction="vertical" // Dikey kaydırma
-        loop={true} // Sonsuz döngü
-        autoplay={{
-          delay: 2000, // 2 saniyede bir geçiş
-          // disableOnInteraction: false, // Kullanıcı etkileşiminden sonra da devam etsin
-        }}
-        className="h-fit"
-        slidesPerView={1} // Tek slayt gösterimi
-        modules={[Autoplay]}
-        onAutoplayStart={() => console.log("Autoplay başladı")}
-        onAutoplayStop={() => console.log("Autoplay durduruldu")}
-      >
-        <SwiperSlide>
-          <h2 className="text-cprimary">debit</h2>
-        </SwiperSlide>
-        <SwiperSlide>
-          <h2 className="text-cprimary">taksit</h2>
-        </SwiperSlide>
-      </Swiper> */
-}

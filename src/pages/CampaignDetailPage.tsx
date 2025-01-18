@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import BackBtn from "../components/BackBtn";
+import BackBtn from "../components/button/BackBtn";
 import { useEffect, useState } from "react";
 import { CampaignItemType } from "../types/campaign";
 import face from "../assets/face-share.svg";

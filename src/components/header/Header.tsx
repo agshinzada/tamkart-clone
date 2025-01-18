@@ -1,7 +1,7 @@
 import { useState } from "react";
 import logo from "../../assets/logo.svg";
-import BurgerBtn from "../BurgerBtn";
-import Button from "../Button";
+import BurgerBtn from "../button/BurgerBtn";
+import Button from "../button/Button";
 import MobileNav from "./MobileNav";
 import Navbar from "./Navbar";
 const Header = () => {

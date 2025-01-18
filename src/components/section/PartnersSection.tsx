@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Button from "../Button";
+import Button from "../button/Button";
 import SectionButton from "./SectionButton";
 import { PartnerDetail } from "../../types/partner";
 import PartnersSlider from "../partner/PartnersSlider";

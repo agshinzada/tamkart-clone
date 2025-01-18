@@ -1,6 +1,6 @@
 import search from "../assets/search.svg";
 import down from "../assets/down.svg";
-import ClearBtn from "./ClearBtn";
+import ClearBtn from "./button/ClearBtn";
 
 const PartnerFilter = () => {
   return (

@@ -1,6 +1,6 @@
 import { useParams, useSearchParams } from "react-router-dom";
 import circle from "../assets/circle.svg";
-import Button from "../components/Button";
+import Button from "../components/button/Button";
 import SectionTitle from "../components/section/SectionTitle";
 import icon1 from "../assets/services/1.svg";
 import icon2 from "../assets/services/2.svg";
@@ -9,10 +9,10 @@ import icon4 from "../assets/services/4.svg";
 import icon5 from "../assets/services/5.svg";
 import { useEffect, useState } from "react";
 import { CardItemTypes } from "../types/card";
-import BackBtn from "../components/BackBtn";
-import PageServiceSlider from "../components/PageServiceSlider";
+import BackBtn from "../components/button/BackBtn";
+import PageServiceSlider from "../components/slider/PageServiceSlider";
 import CardInfo from "../components/card/CardInfo";
-import SlideControlBtn from "../components/SlideControlBtn";
+import SlideControlBtn from "../components/button/SlideControlBtn";
 import CardServiceSlider from "../components/services/CardServiceSlider";
 import RelatedCardSlider from "../components/card/RelatedCardSlider";
 

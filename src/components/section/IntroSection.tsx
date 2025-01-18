@@ -1,5 +1,5 @@
-import TextSlider from "../TextSlider";
-import DetailSlider from "../DetailSlider";
+import TextSlider from "../slider/TextSlider";
+import DetailSlider from "../slider/DetailSlider";
 import RotatingImageOnScroll from "../RotatingImageOnScroll";
 const IntroSection = () => {
   return (
