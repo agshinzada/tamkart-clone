@@ -81,73 +81,88 @@ const CardDetailPage = () => {
   }, [params]);
 
   return (
-    <section className="pt-36 px-10 laptop:px-0">
+    <section className="pt-36 tablet:px-10 px-4 laptop:px-0">
       <div className="max-w-[1040px] mx-auto ">
-        <BackBtn />
-        <div className="flex justify-between mt-10 items-center">
-          <div className="w-[62%] flex flex-col gap-7">
-            {/* TABLET */}
+        <div className="hidden tablet:block">
+          <BackBtn />
+        </div>
+        <div className="flex justify-between tablet:mt-14 items-center tablet:flex-row flex-col">
+          <div className="tablet:w-[62%] w-full flex flex-col gap-7 order-1 tablet:order-0 mt-[250px] tablet:mt-0">
             <div className="flex flex-col gap-2">
-              <h4 className="laptop:text-[48px] text-[40px] text-white font-bold">
+              <h4 className="laptop:text-[48px] tablet:text-[40px] text-[32px] text-white font-bold">
                 {cardData?.name}
               </h4>
-              <p className="laptop:text-lg text-[16px] text-white opacity-60">
+              <p className="laptop:text-lg tablet:text-[16px] text-sm text-white opacity-60">
                 {cardData?.summary}
               </p>
             </div>
-            <div className="grid grid-cols-2 laptop:flex gap-10 items-center text-white">
-              <div className="flex flex-col justify-start">
-                <h4 className="laptop:text-[22px] text-lg font-semibold">
+            <div className="tablet:grid tablet:grid-cols-2 flex flex-col laptop:flex-row laptop:flex tablet:gap-10 gap-2 laptop:items-center text-white">
+              <div className="flex tablet:flex-col flex-row justify-between tablet:justify-start">
+                <h4 className="laptop:text-[22px] tablet:text-lg text-[16px] font-semibold order-1 tablet:order-0">
                   10%-dək
                 </h4>
-                <p className="text-[16px] opacity-50">Keşbək</p>
+                <p className="text-[16px] opacity-50 order-0 tablet:order-1">
+                  Keşbək
+                </p>
               </div>
-              <div className="flex flex-col justify-start">
-                <h4 className="laptop:text-[22px] text-lg font-semibold text-cprimary">
+              <div className="flex tablet:flex-col flex-row justify-between tablet:justify-start">
+                <h4 className="laptop:text-[22px] tablet:text-lg text-[16px] font-semibold text-cprimary order-1 tablet:order-0">
                   0 AZN
                 </h4>
-                <p className="text-[16px] opacity-50">Qiymət</p>
+                <p className="text-[16px] opacity-50 order-0 tablet:order-1">
+                  Qiymət
+                </p>
               </div>
-              <div className="flex flex-col justify-start">
-                <h4 className="laptop:text-[22px] text-lg font-semibold">
+              <div className="flex tablet:flex-col flex-row justify-between tablet:justify-start">
+                <h4 className="laptop:text-[22px] tablet:text-lg text-[16px] font-semibold order-1 tablet:order-0">
                   AZN/USD/EUR
                 </h4>
-                <p className="text-[16px] opacity-50">Valyuta</p>
+                <p className="text-[16px] opacity-50 order-0 tablet:order-1">
+                  Valyuta
+                </p>
               </div>
-              <div className="flex flex-col justify-start">
-                <h4 className="laptop:text-[22px] text-lg font-semibold">
+              <div className="flex tablet:flex-col flex-row justify-between tablet:justify-start">
+                <h4 className="laptop:text-[22px] tablet:text-lg text-[16px] font-semibold order-1 tablet:order-0">
                   5 il
                 </h4>
-                <p className="text-[16px] opacity-50">Xidmət müddəti</p>
+                <p className="text-[16px] opacity-50 order-0 tablet:order-1">
+                  Xidmət müddəti
+                </p>
               </div>
             </div>
             <div className="w-fit hidden laptop:block">
               <Button title="İndi sifariş et" size="w-fit" />
             </div>
           </div>
-          <div className="w-[380px] relative">
-            <img src={circle} alt="circle" className="hidden laptop:block" />
+          <div className="w-[309px] tablet:w-[380px] relative order-0 tablet:order-1">
+            <img
+              src={circle}
+              alt="circle"
+              className="absolute mx-auto tablet:static tablet:hidden laptop:block z-10 -top-[15px] left-[42px] tablet:mx-0"
+            />
             <img
               src={cardData?.image}
               alt="card"
-              className="block laptop:hidden mb-8 w-full"
+              className="absolute block z-20 tablet:static laptop:hidden mb-8 w-full"
             />
             <img
               src={cardData?.image}
               alt="card"
               className="hidden laptop:block absolute -top-12 right-0 w-[309px]"
             />
-            <div className="w-full laptop:hidden">
+            <div className="fixed tablet:static tablet:w-full w-fit bottom-2 left-[37%] laptop:hidden">
               <Button title="İndi sifariş et" size="w-full" />
             </div>
           </div>
         </div>
         <PageServiceSlider />
         <CardInfo cardData={cardData!} />
-        <div className="mt-24">
+        <div className="tablet:mt-24 mt-16">
           <div className="flex items-center justify-between">
             <SectionTitle title="Kart üzrə xidmətlər" />
-            <SlideControlBtn />
+            <div className="hidden tablet:block">
+              <SlideControlBtn />
+            </div>
           </div>
         </div>
       </div>

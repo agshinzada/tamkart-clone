@@ -39,18 +39,19 @@ const CampaignDetailPage = () => {
   }, [params]);
 
   return (
-    <section className="max-w-[1040px] mx-auto pt-36 px-10 laptop:px-0">
-      <BackBtn />
-
+    <section className="max-w-[1040px] mx-auto tablet:pt-36 pt-14 tablet:px-10 px-4 laptop:px-0">
+      <div className="hidden tablet:block">
+        <BackBtn />
+      </div>
       <img
         src={campaignData?.image}
         alt="cover"
         className="w-full rounded-3xl mt-14"
       />
-      <h5 className="text-[40px] font-bold text-white mt-12">
+      <h5 className="text-2xl tablet:text-[40px] font-bold text-white tablet:mt-12 mt-7">
         {campaignData?.name}
       </h5>
-      <p className="text-xl text-white mt-2">
+      <p className="text-sm tablet:text-xl text-white tablet:mt-2 mt-4">
         TamGənc-li olmaq istəyənlər üçün əsl vaxtdır. TamGənc Visa debet kartı
         sahibi olmaq üçün yaş həddi 25-dən 29 yaşadək qaldırılıb. <br /> TamGənc
         sahibləri hansı üstünlüklər əldə edir? <br />
@@ -63,7 +64,7 @@ const CampaignDetailPage = () => {
         TamGənc ilə gəncliyini tam yaşa!
       </p>
 
-      <div className="flex justify-between rounded-2xl py-6 px-8 bg-csecondary mt-12">
+      <div className="flex justify-between rounded-2xl py-6 px-8 bg-csecondary tablet:mt-12 mt-6">
         <p className="text-[17px] text-white">Share campaign</p>
         <div className="flex gap-5 items-center">
           <img src={face} alt="icon" width={11} />
@@ -72,7 +73,7 @@ const CampaignDetailPage = () => {
         </div>
       </div>
 
-      <div className="mt-28">
+      <div className="tablet:mt-28 mt-14">
         <SectionTitle title="Digər kampaniyalar" />
         <RelatedCampaignSlider data={relatedCampaigns} />
       </div>

@@ -27,9 +27,11 @@ const PartnerDetailPage = () => {
   }, [params]);
 
   return (
-    <section className="max-w-[1040px] mx-auto pt-36 px-10 laptop:px-0">
-      <BackBtn />
-      <div className="flex gap-6 items-center mt-14">
+    <section className="max-w-[1040px] mx-auto tablet:pt-36 pt-14 tablet:px-10 px-4 laptop:px-0">
+      <div className="hidden tablet:block">
+        <BackBtn />
+      </div>
+      <div className="flex gap-6 items-center mt-14 flex-col tablet:flex-row justify-center tablet:justify-normal">
         <div className="w-[88px] h-[88px]">
           <img
             src={partnerData?.image}
@@ -37,13 +39,17 @@ const PartnerDetailPage = () => {
             className="object-cover w-full h-full rounded-full"
           />
         </div>
-        <div className="text-white leading-10">
-          <h5 className="text-[40px] font-bold">{partnerData?.name}</h5>
-          <p className="text-lg opacity-50">{partnerData?.type}</p>
+        <div className="text-white leading-10 text-center tablet:text-left">
+          <h5 className="text-2xl tablet:text-[40px] font-bold">
+            {partnerData?.name}
+          </h5>
+          <p className="text-sm tablet:text-lg opacity-50">
+            {partnerData?.type}
+          </p>
         </div>
       </div>
-      <div className="py-10 px-12 bg-csecondary rounded-3xl mt-12">
-        <h5 className="font-semibold text-white text-[36px]">
+      <div className="tablet:py-10 tablet:px-12 p-7 bg-csecondary rounded-3xl tablet:mt-12 mt-5">
+        <h5 className="font-semibold text-white text-2xl tablet:text-[36px]">
           Taksit şərtləri
         </h5>
         <div className="flex gap-2 my-3">
@@ -54,12 +60,12 @@ const PartnerDetailPage = () => {
             6 ay
           </span>
         </div>
-        <p className="text-white opacity-50 text-lg mt-6">
+        <p className="text-white opacity-50 text-xs tablet:text-lg mt-6">
           Taksit əməliyyatları zamanı əlavə heç bir komissiya tətbiq olunmur.{" "}
           <br />* Məhsul və kampaniyalardan asılı olaraq Taksit və Cashback
           şərtləri dəyişə bilər.
         </p>
-        <p className="text-lg text-white font-semibold flex items-center gap-3 mt-16">
+        <p className="text-lg text-white font-semibold flex items-center gap-3 tablet:mt-16 mt-5">
           <svg
             width="18"
             height="22"
@@ -84,7 +90,7 @@ const PartnerDetailPage = () => {
         allowFullScreen={true}
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        className="rounded-2xl mt-12"
+        className="rounded-2xl tablet:mt-12 mt-6"
       ></iframe>
     </section>
   );

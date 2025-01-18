@@ -22,12 +22,8 @@ const PartnerFilter = () => {
             className="w-full min-w-[180px] font-bold bg-csecondary py-[14px]  px-5 text-white placeholder:text-white outline-none rounded-[100px] hover:bg-cprimary hover:text-black transition-all duration-150 appearance-none"
           >
             <option value="disabled" disabled selected>
-              Kateqoriyalar
+              Kateqoriya
             </option>
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
           </select>
         </div>
         <div className="relative tablet:w-1/2 laptop:w-fit">
@@ -39,10 +35,6 @@ const PartnerFilter = () => {
             <option value="disabled" disabled selected>
               Taksitlər
             </option>
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
           </select>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { CampaignItemType } from "../../types/campaign";
 import RelatedCampaignItem from "./RelatedCampaignItem";
 
 const RelatedCampaignSlider = ({ data }: { data: CampaignItemType[] }) => {
-  const sliderRef = useRef(null);
+  const sliderRef = useRef<HTMLDivElement>(null!);
   let isDragging = false;
   let startX: number;
   let scrollLeft: number;

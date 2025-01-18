@@ -2,14 +2,14 @@ import { CardItemTypes } from "../../types/card";
 
 const CardInfo = ({ cardData }: { cardData: CardItemTypes }) => {
   return (
-    <div className="py-12 px-16 rounded-3xl bg-csecondary text-white flex flex-col gap-10 mt-24">
-      <p className="text-[40px] font-bold">
+    <div className="tablet:py-12 tablet:px-16 p-8 rounded-3xl bg-csecondary text-white flex flex-col gap-10 tablet:mt-16 mt-5">
+      <p className="text-2xl tablet:text-[40px] font-bold">
         <span className="text-cprimary">
           {cardData?.type === "debit" ? "Debet" : "Kredit"} kart
         </span>{" "}
         üzrə imkanlar
       </p>
-      <ul className="font-semibold flex flex-col gap-4">
+      <ul className="font-semibold flex flex-col gap-4 tablet:text-[16px] text-sm">
         <li className="before:content-[''] before:block before:min-w-4 before:h-0.5 before:bg-cprimary before:mr-4 flex items-center">
           <p>
             Tam DigiCard-ı həm fiziki kart, həm də rəqəmsal formada əldə edə

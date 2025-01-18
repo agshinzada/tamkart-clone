@@ -3,7 +3,7 @@ import { ServiceItemType } from "../../types/service";
 import CardServiceItem from "./CardServiceItem";
 
 const CardServiceSlider = ({ data }: { data: ServiceItemType[] }) => {
-  const sliderRef = useRef(null);
+  const sliderRef = useRef<HTMLDivElement>(null!);
   let isDragging = false;
   let startX: number;
   let scrollLeft: number;
@@ -27,7 +27,7 @@ const CardServiceSlider = ({ data }: { data: ServiceItemType[] }) => {
   };
 
   return (
-    <div className="tablet:px-3 overflow-hidden mt-8">
+    <div className="tablet:px-3 overflow-hidden tablet:mt-8 mt-5">
       <div
         className="flex overflow-x-auto scroll-smooth space-x-4 scrollbar-hide"
         onMouseDown={handleMouseDown}

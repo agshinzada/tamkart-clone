@@ -13,7 +13,7 @@ const DebitCalculateSection = () => {
         </p>
         <div className="flex gap-6 flex-col laptop:flex-row">
           <div className="px-6 py-5 flex justify-between laptop:justify-normal items-center gap-5 text-sm tablet:text-[16px] bg-cfour laptop:w-fit w-full z-10 rounded-2xl">
-            <div className="text-white ">
+            <div className="text-white laptop:flex laptop:flex-col laptop:gap-2">
               <p className="opacity-50 font-[500]">Qalıq məbləği daxil edin</p>
               <p className="text-lg tablet:text-[24px] font-bold">2500</p>
             </div>
@@ -22,12 +22,14 @@ const DebitCalculateSection = () => {
             </span>
           </div>
           <div className="px-6 py-5 flex flex-row tablet:flex-col laptop:flex-row justify-between laptop:justify-normal items-center laptop:gap-20 gap-3 text-sm tablet:text-[16px] bg-cfour laptop:w-fit w-full z-10 rounded-2xl">
-            <div className="text-white flex flex-col tablet:flex-row laptop:justify-normal justify-between w-full">
+            <div className="text-white flex flex-col tablet:flex-row laptop:flex-col laptop:justify-normal laptop:gap-2 justify-between w-full">
               <p className="opacity-50 font-[500]">Faiz</p>
               <p className="text-lg tablet:text-[24px] font-bold">7,0 %</p>
             </div>
-            <div className="text-white flex flex-col tablet:flex-row laptop:justify-normal justify-between items-end tablet:items-start w-full">
-              <p className="opacity-50 font-[500]">Qalığa aylıq gəlir</p>
+            <div className="text-white flex flex-col tablet:flex-row laptop:flex-col laptop:justify-normal laptop:gap-2 justify-between items-end tablet:items-start w-full">
+              <p className="opacity-50 font-[500] text-nowrap">
+                Qalığa aylıq gəlir
+              </p>
               <p className="text-lg tablet:text-[24px] font-bold text-cprimary">
                 14.58 AZN{" "}
               </p>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const RelatedCampaignItem = ({ item }: { item: CampaignItemType }) => {
   return (
-    <Link to={`/campaigns/${item.id}`}>
+    <Link to={`/campaigns/${item.id}`} className="select-none">
       <div className="w-[300px]">
         <img src={item.image} alt="card" className="w-full rounded-2xl" />
         <h5 className="text-xl font-semibold text-white mt-5">{item.name}</h5>

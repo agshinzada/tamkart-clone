@@ -11,7 +11,7 @@ const SectionCampaignItem = ({ data }: { data: CampaignItemType }) => {
             <img
               src={data.image}
               alt="kampaniya"
-              className="object-cover w-full h-full rounded-[20px] group-hover:scale-110 transition-all duration-200"
+              className="object-cover w-full h-full rounded-[20px] group-hover:scale-105 transition-all duration-200"
             />
           </div>
           <div className="text-white flex flex-col justify-between laptop:mt-8 mt-0">

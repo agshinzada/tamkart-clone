@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import PageTitle from "./PageTitle";
-import parse from "html-react-parser";
 import { FaqItemType } from "../types/faq";
 import search from "../assets/search.svg";
+import FaqItem from "../components/faq/FaqItem";
 
 const FaqsPage = () => {
   const [data, setData] = useState<FaqItemType[]>([]);
@@ -51,15 +51,7 @@ const FaqsPage = () => {
       </div>
       <div className="mt-10 flex flex-col gap-4">
         {filteredData.map((item, index) => (
-          <div
-            className="p-8 rounded-3xl bg-csecondary text-white flex flex-col gap-4"
-            key={index}
-          >
-            <h3 className="font-bold tablet:text-xl text-[16px]">
-              {item.question}
-            </h3>
-            <p className="opacity-80 text-[16px]">{parse(item.answer)}</p>
-          </div>
+          <FaqItem item={item} key={index} />
         ))}
       </div>
     </section>

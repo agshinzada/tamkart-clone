@@ -5,8 +5,8 @@ import serviceIcon2 from "../assets/serviceIcon2.svg";
 import serviceIcon3 from "../assets/serviceIcon3.svg";
 const PageServiceSlider = () => {
   return (
-    <div className="py-10 px-3 overflow-hidden mt-8">
-      <div className="flex overflow-x-auto scroll-smooth space-x-4 scrollbar-hide">
+    <div className="py-10 tablet:px-3 px-0 overflow-hidden mt-8">
+      <div className="flex overflow-x-auto scroll-smooth space-x-4 tablet:space-x-6 scrollbar-hide">
         <CardServiceItem
           data={{
             title: "İkiqat “ƏDV geri al”",

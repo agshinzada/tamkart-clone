@@ -52,7 +52,6 @@ const ServicesSection = () => {
         </div>
       </div>
       <CardServiceSlider data={services} />
-      {/* <CardServices data={services} /> */}
     </section>
   );
 };
