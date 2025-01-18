@@ -1,4 +1,4 @@
-import { Link, useParams, useSearchParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import circle from "../assets/circle.svg";
 import Button from "../components/Button";
 import SectionTitle from "../components/section/SectionTitle";

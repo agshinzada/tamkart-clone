@@ -1,5 +1,4 @@
 import { useState } from "react";
-import card1 from "../../assets/card1.png";
 import SectionButton from "./SectionButton";
 import TabButton from "../TabButton";
 import { TabButtonTypes } from "../../types/button";

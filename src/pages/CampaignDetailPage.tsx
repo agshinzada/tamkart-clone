@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import BackBtn from "../components/BackBtn";
 import { useEffect, useState } from "react";
 import { CampaignItemType } from "../types/campaign";

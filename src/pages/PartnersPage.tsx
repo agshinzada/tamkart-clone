@@ -18,7 +18,7 @@ const PartnersPage = () => {
     setData(data.partners);
   }
 
-  function handleSearch(event: React.ChangeEvent<HTMLInputElement>) {}
+  // function handleSearch(event: React.ChangeEvent<HTMLInputElement>) {}
 
   useEffect(() => {
     getPartners();
