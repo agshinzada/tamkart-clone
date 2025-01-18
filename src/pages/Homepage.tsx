@@ -8,7 +8,7 @@ import TaksitCardDetailSection from "../components/section/TaksitCardDetailSecti
 
 const Homepage = () => {
   return (
-    <div className="pt-36">
+    <div className="mobile:pt-36 pt-32">
       <IntroSection />
       <AdvantageSection />
       <PartnersSection />

@@ -56,7 +56,7 @@ const AdvantageSection = () => {
   }
 
   return (
-    <section className="max-w-[1040px] mx-auto flex flex-col tablet:items-center mt-20 tablet:mt-32 px-4 tablet:px-10 laptop:px-0 laptop:mt-44">
+    <section className="max-w-[1040px] mx-auto flex flex-col tablet:items-center mt-16 tablet:mt-32 px-4 tablet:px-10 laptop:px-0 laptop:mt-44">
       <div className="grid grid-cols-1 tablet:grid-cols-2 tablet:justify-between">
         <div>
           <h4 className="text-white font-bold laptop:text-5xl text-2xl tablet:text-[40px] leading-tight">

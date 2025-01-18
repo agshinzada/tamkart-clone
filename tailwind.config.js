@@ -12,6 +12,7 @@ export default {
         cfour: "#2D2D2E",
       },
       screens: {
+        mobile: "480px",
         tablet: "768px",
         laptop: "1024px",
       },

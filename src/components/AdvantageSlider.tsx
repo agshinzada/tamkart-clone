@@ -21,7 +21,7 @@ const AdvantageSlider = ({ data }: { data: CardAdvantagesType }) => {
 
   return (
     <div className="relative">
-      <Slider {...settings} className="h-full w-[470px] mt-10">
+      <Slider {...settings} className="h-full w-full mobile:w-[470px] mt-10">
         {data.advantages.map((item, index) => (
           <div key={index}>
             <h5 className="text-white text-lg flex gap-3 font-semibold items-center">
